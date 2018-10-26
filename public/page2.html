@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container-fluid" id="nav">
+        <div class="mainheading">
+            <img src="images/logo1.png" alt="logo" id="img">
+            <h3 class="h3" style="display:inline">Create Your Quiz App</h3>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="container" id="info">
+        <div class="align">
+            <h3 class="center">Make your own quiz:</h3>
+            <br>
+            <center>
+                <input type="text" class="form-control" style="border-radius:1rem; height:51px; width:350px" placeholder="Your Quiz Title"
+                    id="quizTitle">
+                <input type="text" class="form-control" style="border-radius:1rem; height:51px; width:350px" placeholder="Your Name" id="userName">
+                <input type="text" class="form-control" style="border-radius:1rem; height:51px; width:350px" placeholder="Quiz Time in Min"
+                    id="quizTime">
+                <p id="error"></p>
+                <br>
+
+                <button type="button" class="btn btn-primary" id="question_btn">Add Questions</button>
+
+            </center>
+        </div>
+    </div>
+
+    <div id="data" class="container" style="display:none">
+        <div class="align">
+            <h1 class="center" id="quizName"> </h1>
+            <h3 class="center">Question</h3>
+            <center>
+                <br>
+                <input type="text" class="form-control" style=" height:51px; width:400px" id="question" placeholder="Question #1">
+                <h4 class="center">Answers</h4>
+                <input type="text" class="form-control" style=" height:51px; width:400px" placeholder="Answer A" id="option1">
+                <input type="text" class="form-control" style=" height:51px; width:400px" placeholder="Answer B" id="option2">
+                <input type="text" class="form-control" style=" height:51px; width:400px" placeholder="Answer C" id="option3">
+                <input type="text" class="form-control" style=" height:51px; width:400px" placeholder="Answer D" id="option4">
+                <br>
+                <select class="form-control" style="width:250px" id="answer">
+                    <option selected>Choose Correct Answer</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+                <p id="error1"></p>
+                <br>
+                <button type="button" class="btn btn-secondary" id="done">Done</button>
+                <button type="button" class="btn btn-success" id="nxtQtn">+ Next Question</button>
+            </center>
+        </div>
+    </div>
+
+    <div class="container" id="created" style="display:none;">
+        <h1 class="center">Your Quiz is Ready</h1>
+        <h2 id="titleOfQuiz" class="center"></h2>
+        <h3 id="madeBy" class="center"></h3>
+        <h3 id="timeOfQuiz" class="center"></h3>
+        <h3 id="totalQuestions" class="center"></h3>
+        <h4 class="center">Passing Score 60%</h4>
+        <br>
+        <center>
+            <button type="button" id="takeQuiz" class="btn btn-success" style="background-color:#904581; border-color:#904581; border-radius:1rem">Take Quiz</button>
+        </center>
+    </div>
+
+    <div class="container" id="mainQuiz" style="display:none">
+        <div class="align">
+            <img src="images/timer.png" alt="timer" id="timeIcon">
+            <h3 id="quizTimer" style="display:inline-block"></h3>
+            <br>
+            <h3 id="quizQuestion"></h3>
+
+            <div class="custom-control custom-radio">
+                <input type="radio" id="customRadio1" name="option" value="1" class="custom-control-input">
+                <label class="custom-control-label" for="customRadio1" id="optn1"></label>
+            </div>
+            <div class="custom-control custom-radio">
+                <input type="radio" id="customRadio2" name="option" value="2" class="custom-control-input">
+                <label class="custom-control-label" for="customRadio2" id="optn2"></label>
+            </div>
+            <div class="custom-control custom-radio">
+                <input type="radio" id="customRadio3" name="option" value="3" class="custom-control-input">
+                <label class="custom-control-label" for="customRadio3" id="optn3"></label>
+            </div>
+            <div class="custom-control custom-radio">
+                <input type="radio" id="customRadio4" name="option" value="4" class="custom-control-input">
+                <label class="custom-control-label" for="customRadio4" id="optn4"></label>
+            </div>
+            <p id="noSelect"></p>
+            <br>
+            <button type="button" id="nextButton" class="btn btn-success">Next</button>
+
+        </div>
+    </div>
+
+    <div class="container" id="resultContainer" style="display:none">
+        <div class="align">
+            <h2 class="center" id="congratz"></h2>
+            <h3 class="center" id="yourScore"></h3>
+            <h3 class="center" id="correctQuestions"></h3>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="navbar fixed-bottom" id="footer">
+        <h6 id="two">Copyright 2018 Muhammad Omer Khan | All Rights Reserved</h6>
+        <span id="icons">
+            <a href="https:/www.facebook.com/omerkhan8" target="_blank">
+                <img src="images/fb.png" alt="facebook" width="50px;" title="facebook">
+            </a>
+            <a href="https://omerkhan-3d1c0.firebaseapp.com" target="_blank">
+                <img src="images/images4.png" alt="cv" width="100px;" title="CV">
+            </a>
+        </span>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+
+</html>
