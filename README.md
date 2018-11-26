@@ -1,4 +1,4 @@
-##Create your quiz app
+# Create your quiz app
 
 [Live Preview](http://create-your-quiz-app.firebaseapp.com)
 
